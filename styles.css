@@ -1,0 +1,63 @@
+body {
+    box-sizing: border-box;
+    margin:0;
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.contenedor {
+    background-color: white;
+    height: calc( 100vh - 350px );
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+}
+h1, h2 {
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+}
+h2 {
+    color:white;
+}
+
+.contenedor-flex {
+    /* inline-flex y flex deja en una linea y se sale del contenedor */
+    display:flex;    
+    border: 3px solid black;    
+    flex-direction: row; 
+    /*  flex-wrap: nowrap (por defecto). si tiene una fila larga y es necesario realizar scroll horizontalmente **/
+    flex-wrap: nowrap;
+}
+
+.contenedor-flex-wrap {
+    /* inline-flex y flex  */
+    display:flex;    
+    border: 3px solid black;    
+    flex-direction: row; 
+    /*  flex-wrap: wrap; . Llena el contenedor en borde negro*/
+    /* flex-wrap normal es usar con flex-direction:row */
+    flex-wrap: wrap;
+}
+
+.contenedor-flex-flow {
+    display:flex;   
+    border: 3px solid black;    
+    flex-direction: row; 
+  /* flex-flow: column o row   y wrap, nowrap o wrap-reverse */
+    flex-flow: row wrap;
+}
+
+.elemento-flex {
+    padding: 10px;
+    background-color: #E53935;
+}
+
+.elemento-flex:nth-child(2) {
+    background-color: #8E24AA;
+}
+
+.elemento-flex:nth-child(3) {
+    background-color: #3F51B5;
+}
